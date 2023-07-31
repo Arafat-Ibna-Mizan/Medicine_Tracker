@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Medicine_Tracker</string>
+    <string name="doctor_name">Doctor Name</string>
+    <string name="enter_doctor_name">Enter doctor name</string>
+    <string name="meeting_date">Meeting Date</string>
+    <string name="enter_date">Enter date</string>
+    <string name="next_meeting_date">Next Meeting Date</string>
+    <string name="enter_next_meet_date">Enter next meet date</string>
+    <string name="daily_meal_time">Daily Meal Time</string>
+    <string name="morning">Morning</string>
+    <string name="lunch">Lunch</string>
+    <string name="enter_time">Enter Time</string>
+    <string name="dinner">Dinner</string>
+    <string name="next">Next</string>
+    <string name="enter_medicine_information">Enter Medicine information</string>
+    <string name="update">update</string>
+    <string name="medicine_id">Medicine Id</string>
+    <string name="enter_medicine_no">Enter Medicine no.</string>
+    <string name="medicine_information">Medicine Information</string>
+    <string name="back"><![CDATA[<-- Back]]></string>
+
+</resources>

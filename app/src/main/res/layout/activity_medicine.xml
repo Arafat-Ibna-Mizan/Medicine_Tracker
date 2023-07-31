@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".MedicineActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/medicine_page_headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F44336"
+                android:gravity="center"
+                android:text="@string/enter_medicine_information"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#4CAF50"
+                android:visibility="visible"
+                app:cardBackgroundColor="#9BF19E">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/med1_morning_checkbox"
+                    app:layout_constraintTop_toBottomOf="@+id/med1_morning_checkbox">
+
+                    <TextView
+                        android:id="@+id/medi_doc_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="51dp"
+                        android:layout_marginBottom="62dp"
+                        android:gravity="center"
+                        android:text="Doc_Id"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/Medicine_id"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/medi_doc_id_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="58dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="10"
+                        android:hint="Previously entered doc id"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/medicine_name1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Medicine_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="41dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="111dp"
+                        android:layout_marginBottom="111dp"
+                        android:background="#F6E5E5"
+                        android:gravity="center"
+                        android:text="@string/medicine_id"
+                        android:textSize="20sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toTopOf="@+id/medi1_qnty"
+                        app:layout_constraintStart_toStartOf="@+id/med1_morning_checkbox"
+                        app:layout_constraintTop_toTopOf="@+id/medicine_name1"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/medicine_id_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="54dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginBottom="54dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/enter_medicine_no"
+                        android:inputType="number"
+                        app:layout_constraintBottom_toBottomOf="@+id/med1_morning_checkbox"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/medi_doc_id_field"
+                        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/m_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="9dp"
+                        android:background="#F6E5E5"
+                        android:gravity="center"
+                        android:text="Name"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toTopOf="@+id/medi_doc_id"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/medicine_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+
+                        android:layout_marginStart="42dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="41dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#F6E5E5"
+                        android:backgroundTint="#F6E5E5"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter Medicine Name"
+                        app:layout_constraintBottom_toTopOf="@+id/medi_doc_id_field"
+                        app:layout_constraintEnd_toEndOf="@+id/medicine_id_field"
+                        app:layout_constraintStart_toEndOf="@+id/m_name1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <CheckBox
+                        android:id="@+id/med1_morning_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="46dp"
+                        android:background="#F6E5E5"
+                        android:gravity="center|clip_vertical"
+                        android:text="@string/morning"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/medi1_beforemeal"
+                        app:layout_constraintStart_toStartOf="@+id/medi1_beforemeal"
+                        app:layout_constraintTop_toTopOf="@+id/Medicine_id"
+                        tools:ignore="MissingConstraints" />
+
+                    <CheckBox
+                        android:id="@+id/medi1_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="57dp"
+                        android:layout_marginBottom="58dp"
+                        android:background="#F6E5E5"
+                        android:gravity="center"
+                        android:text="Day"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/medi1_no_of_days_field"
+                        app:layout_constraintStart_toStartOf="@+id/medicine_id_field"
+                        app:layout_constraintTop_toTopOf="@+id/medicine_id_field"
+                        tools:ignore="MissingConstraints" />
+
+                    <CheckBox
+                        android:id="@+id/medi1_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="54dp"
+                        android:layout_marginBottom="54dp"
+                        android:background="#F6E5E5"
+                        android:gravity="center"
+                        android:text="Night"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/medi1_qnty"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/medicine_id_field"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/medi1_no_of_days_field"
+                        android:layout_width="73dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginEnd="17dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/medi1_day_no"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/medi1_day_no"
+                        app:layout_constraintTop_toTopOf="@+id/medi1_day_no"
+                        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/medi1_day_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="11dp"
+                        android:gravity="center"
+                        android:text="No of Days"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/medi1_beforemeal"
+                        app:layout_constraintTop_toBottomOf="@+id/medi1_aftermeal"
+                        tools:ignore="MissingConstraints" />
+
+                    <CheckBox
+                        android:id="@+id/medi1_beforemeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="212dp"
+                        android:gravity="center"
+                        android:text="Before Meal"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <CheckBox
+                        android:id="@+id/medi1_aftermeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="46dp"
+                        android:text="After Meal"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/medi1_night"
+                        app:layout_constraintStart_toStartOf="@+id/medi1_night"
+                        app:layout_constraintTop_toTopOf="@+id/medi1_night"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/medi1_qnty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Qnty"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/medi1_beforemeal"
+                        app:layout_constraintTop_toBottomOf="@+id/medi1_beforemeal"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/medi1_qnty_field"
+                        android:layout_width="107dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/medi1_day_no"
+                        app:layout_constraintEnd_toStartOf="@+id/medi1_day_no"
+                        app:layout_constraintStart_toEndOf="@+id/medi1_qnty"
+                        app:layout_constraintTop_toTopOf="@+id/medi1_qnty"
+                        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/medi_back"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#F84A85"
+                    android:gravity="center"
+                    android:text="Back"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/save"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#F84A85"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

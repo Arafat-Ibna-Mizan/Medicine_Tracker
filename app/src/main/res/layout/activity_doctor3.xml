@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorActivity3">>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Doc_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+
+
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/doctor_name"
+                android:textAlignment="textStart"
+                android:textColor="#063E08"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/doc_name_field"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/doc_name_field_decoration"
+
+                android:cursorVisible="true"
+
+                android:gravity="start"
+
+                android:hint="@string/enter_doctor_name"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                tools:ignore="TouchTargetSizeCheck"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/doc_id_field"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Doctor Id"
+                android:textAlignment="textStart"
+                android:textColor="#063E08"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/doc_id"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/doc_name_field_decoration"
+                android:baselineAligned="false"
+                android:cursorVisible="true"
+
+                android:ems="10"
+
+                android:gravity="start"
+
+                android:hint="Enter doctor id"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+
+                android:paddingBottom="5dp"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                tools:ignore="TouchTargetSizeCheck"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/meet_date"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+
+
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/meeting_date"
+                android:textAlignment="textStart"
+                android:textColor="#063E08"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/id_date"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/doc_name_field_decoration"
+
+                android:baselineAligned="false"
+
+                android:cursorVisible="true"
+
+                android:gravity="start"
+                android:hint="@string/enter_date"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+
+                tools:ignore="TouchTargetSizeCheck"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/next_meet_date"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+
+
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/next_meeting_date"
+                android:textAlignment="textStart"
+                android:textColor="#063E08"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/id_next_date"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/doc_name_field_decoration"
+
+                android:cursorVisible="true"
+
+                android:gravity="start"
+
+                android:hint="@string/enter_next_meet_date"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                tools:ignore="TouchTargetSizeCheck"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="300dp"
+                android:layout_height="350dp">
+
+                <ImageView
+                    android:id="@+id/pres_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_button"
+
+                    app:layout_constraintEnd_toEndOf="@+id/img_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/image"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/img_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/camera_button"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/Next_button"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="#7CDCD3"
+                android:gravity="center"
+                android:text="update"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

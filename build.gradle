@@ -1,0 +1,36 @@
+ext {
+    buildToolsVersion = '33.0.1'
+    ndkVersion = '25.1.8937393'
+    compileSdkVersion = 31
+    ndkVersion1 = ndkVersion
+
+
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        agp_version = '7.0.4'
+
+    }
+    repositories {
+        google()
+        mavenCentral()
+        //maven { url "https://jitpack.io" }
+
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        // Add the dependency for the Google services Gradle plugin
+        classpath 'com.google.gms:google-services:4.3.14'
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

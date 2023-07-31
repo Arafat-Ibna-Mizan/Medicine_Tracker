@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DailyActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/meal_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/daily_meal_time"
+            android:textColor="#009688"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_morning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/morning"
+            android:textColor="@color/teal_700"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/id_lunch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/id_lunch" />
+
+        <EditText
+            android:id="@+id/morning_time_field"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_time"
+
+            android:inputType="time"
+            android:minHeight="48dp"
+            android:textColor="@color/teal_700"
+            android:textColorHint="@color/teal_700"
+            app:layout_constraintStart_toStartOf="@+id/id_morning"
+            app:layout_constraintTop_toBottomOf="@+id/id_morning"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/morning_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="11dp"
+            android:text="Set"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/morning_time_field" />
+
+        <TextView
+            android:id="@+id/id_lunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/lunch"
+            android:textColor="@color/teal_700"
+            android:textColorHint="@color/teal_700"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lunch_time_field"
+            app:layout_constraintEnd_toEndOf="@+id/lunch_time_field" />
+
+        <EditText
+            android:id="@+id/lunch_time_field"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="133dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_time"
+            android:inputType="time"
+            android:minHeight="48dp"
+            android:textColor="@color/teal_700"
+            android:textColorHint="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/lunch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="6dp"
+            android:text="set"
+            app:layout_constraintEnd_toEndOf="@+id/lunch_time_field"
+            app:layout_constraintTop_toBottomOf="@+id/lunch_time_field" />
+
+        <TextView
+            android:id="@+id/id_dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/dinner"
+            android:textColor="@color/teal_700"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dinner_time_field"
+            app:layout_constraintEnd_toEndOf="@+id/dinner_time_field"
+            app:layout_constraintStart_toStartOf="@+id/dinner_time_field" />
+
+        <EditText
+            android:id="@+id/dinner_time_field"
+            android:layout_width="153dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="278dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_time"
+            android:inputType="time"
+            android:minHeight="48dp"
+            android:textColor="@color/teal_700"
+            android:textColorHint="@color/teal_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/dinner_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="set"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dinner_time_field" />
+
+        <TextView
+            android:id="@+id/NextView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="24dp"
+            android:background="#7CDCD3"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="#00796B"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
